@@ -16,3 +16,11 @@ body {
   font-size: 1.5rem;
   font-family: "Inter", sans-serif;
 }
+
+image,
+svg {
+  max-width: 100%;
+}
+p {
+  line-height: 1.7;
+}

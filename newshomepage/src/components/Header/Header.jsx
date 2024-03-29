@@ -37,11 +37,11 @@ const Header = () => {
         </nav>
         <div className="hambuger">
           <FaBars
-            className={`hambuger-btn ${active ? "" : "active"}`}
+            className={`hambuger-btn ${active ? "active" : ""}`}
             onClick={handleMenu}
           />
           <IoClose
-            className={`hambuger-btn ${active ? "active" : ""}`}
+            className={`hambuger-btn ${active ? "" : "active"}`}
             onClick={handleMenu}
           />
         </div>

@@ -1,0 +1,191 @@
+.hero {
+  margin-top: 2rem;
+
+  .main-hero {
+    &__img {
+      width: 100%;
+      max-width: 100%;
+
+      picture,
+      img {
+        display: block;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    &__content {
+      margin: 1rem 0;
+
+      .main-title {
+        color: $accent;
+        font-weight: 800;
+        font-size: 3.6rem;
+      }
+      .sub-hero {
+        margin: 1rem 0;
+
+        p {
+          color: $text-secondary;
+          font-size: 1.4rem;
+        }
+
+        .btn-primary {
+          margin: 1rem 0;
+          display: inline-block;
+          text-transform: uppercase;
+          font-size: 1.2rem;
+          background-color: $red;
+
+          &:hover {
+            background-color: $accent;
+            scale: 1.01;
+          }
+        }
+      }
+    }
+  }
+  .aside-hero {
+    background-color: $accent;
+    padding: 1.5rem;
+
+    &__title {
+      color: $orange;
+    }
+
+    .aside-card {
+      border-bottom: 0.1rem solid $text-primary;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &__title {
+        color: $white;
+        font-size: 1.6rem;
+        margin: 1rem 0;
+        display: block;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+
+      &__text {
+        color: $text-primary;
+        font-size: 1.2rem;
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+article {
+  display: grid;
+  grid-template-columns: auto;
+  margin: 2rem 0;
+
+  .article-card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    &__img {
+      align-self: center;
+      height: auto;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__description {
+      h2 {
+        color: $text-primary;
+        margin-bottom: 0.5rem;
+      }
+      h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        color: $text-secondary;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    margin: 0;
+
+    .main-hero {
+      &__content {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        .main-title {
+          font-size: 5.6rem;
+          width: 70%;
+        }
+
+        .sub-hero {
+          p {
+            margin-bottom: 2rem;
+          }
+          .btn-primary {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    .aside-hero {
+      margin: 0;
+
+      &__title {
+        margin-bottom: 2rem;
+        font-size: 3.6rem;
+      }
+
+      .aside-card {
+        margin-bottom: 2rem;
+
+        &__title {
+          font-size: 2rem;
+        }
+        &__text {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+  article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+
+    .article-card {
+      h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+      h3 {
+        font-size: 1.7rem;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

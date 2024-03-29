@@ -11,15 +11,16 @@ header > .container {
     height: 100vh;
     top: 0;
     right: -12%;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     box-shadow: -5px 0 100px rgba($color: #000000, $alpha: 0.25);
     padding: 2rem;
     transition: all 300ms ease;
+    background-color: $white;
 
     &.active {
-      display: flex;
+      display: none;
     }
 
     .nav-items {
@@ -33,6 +34,11 @@ header > .container {
         font-weight: 700;
         color: $text-secondary;
         cursor: pointer;
+
+        &:hover {
+          color: $orange;
+          font-weight: 700;
+        }
       }
     }
   }
@@ -52,6 +58,9 @@ header > .container {
   }
 }
 @media (min-width: 720px) {
+  header {
+    margin-bottom: 2rem;
+  }
   header > .container {
     .main-nav {
       position: relative;
