@@ -1,5 +1,77 @@
-header {
-  width: 80%;
-  margin: 0 auto;
-  color: $text-primary;
+header > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4rem;
+  position: relative;
+
+  .main-nav {
+    position: absolute;
+    width: 85%;
+    height: 100vh;
+    top: 0;
+    right: -12%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: -5px 0 100px rgba($color: #000000, $alpha: 0.25);
+    padding: 2rem;
+    transition: all 300ms ease;
+
+    &.active {
+      display: flex;
+    }
+
+    .nav-items {
+      display: flex;
+      flex-direction: column;
+
+      .nav__link {
+        padding: 1rem 0;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 700;
+        color: $text-secondary;
+        cursor: pointer;
+      }
+    }
+  }
+  .hambuger {
+    position: absolute;
+    right: 0;
+    transition: all 500ms ease;
+
+    .hambuger-btn {
+      font-size: 4rem;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+@media (min-width: 720px) {
+  header > .container {
+    .main-nav {
+      position: relative;
+      height: auto;
+      width: auto;
+      flex-direction: row;
+      box-shadow: none;
+
+      .nav-items {
+        flex-direction: row;
+
+        .nav__link {
+          margin-left: 2rem;
+          font-weight: 500;
+          font-size: 1.6rem;
+        }
+      }
+    }
+    .hambuger {
+      display: none;
+    }
+  }
 }
