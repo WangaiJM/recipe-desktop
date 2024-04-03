@@ -1,0 +1,94 @@
+$nutmeg: hsl(14, 45%, 36%);
+$darkRaspberry: hsl(332, 51%, 32%);
+$white: hsl(0, 0%, 100%);
+$roseWhite: hsl(330, 100%, 98%);
+$eggshell: hsl(30, 54%, 90%);
+$lightGrey: hsl(30, 18%, 87%);
+$wengeBrown: hsl(30, 10%, 34%);
+$darkCharcoal: hsl(24, 5%, 18%);
+
+.title,
+.sub-title {
+  font-family: "young-serif";
+}
+
+body {
+  background-color: darken($eggshell, 10%);
+  font-family: "Outfit";
+}
+img {
+  max-width: 100%;
+  border-radius: 2em 2em 0 0;
+}
+p {
+  line-height: 1.6;
+}
+.container {
+  width: 50%;
+  max-width: 900px;
+  margin: 5em auto;
+  background-color: $white;
+  border-radius: 2em;
+  padding: 2em;
+
+  .title {
+    font-size: 3rem;
+  }
+}
+.time {
+  background-color: darken($roseWhite, 2%);
+  padding: 1rem;
+  border-radius: 1.2rem;
+
+  .sub-title {
+    color: darken($roseWhite, 80%);
+  }
+  li {
+    padding: 0.4rem 0;
+
+    .strong {
+      font-weight: 700;
+    }
+  }
+}
+.ingredients,
+.instructions,
+.nutrition {
+  border-bottom: 1px solid lighten($wengeBrown, 50%);
+
+  .sub-title {
+    color: darken($roseWhite, 80%);
+  }
+
+  ol,
+  ul {
+    li {
+      padding: 0.4em 0;
+
+      .strong {
+        font-weight: 700;
+      }
+    }
+  }
+}
+.nutrition {
+  border-bottom: none;
+  table {
+    width: 100%;
+
+    tr {
+      margin: 1rem;
+      td {
+        padding: 0.3rem;
+        border-bottom: 1px solid lighten($wengeBrown, 50%);
+        color: darken($lightGrey, 30%);
+
+        &:last-child {
+          color: darken($eggshell, 80%);
+          font-weight: 800;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
